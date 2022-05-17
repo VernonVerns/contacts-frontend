@@ -1,54 +1,8 @@
 #contacts_page {
     .header-part {
-        padding: 2em 0;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        align-items: center;
+       
 
-        .actions {
-            justify-self: flex-end;
-            background-color: rgba(0,0,0,0.4);
-            border-radius: 20px 0 0 20px;
-            padding: 1.5em 1em;
-            display: flex;
-            gap: 1em;
-
-
-            .search-part {
-                position: relative;
-
-                input {
-                    border: 0;
-                    border-radius: 15px 0 0 15px;
-                    padding: 0.3em 1em;
-                    background-color: $primary-color;
-                    color: $text-color;
-                    margin: 0;
-
-                    &::placeholder {
-                        color: $text-color;
-                    }
-                }
-
-                button {
-                    position: absolute;
-                    top: 2px;
-                    right: 2px;
-                    border: 0;
-                    color: $grey-text-color;
-                    padding: 0.3em 0.75em;
-                    font-size: 14px;
-                    background-color: $dark-color;
-                    transition: $transition;
-
-                    &:hover {
-                        color: $text-color;
-                        transition: $transition;
-                    }
-                }
-            }
-        }
+        
     }
 
     .content {
@@ -56,22 +10,152 @@
         grid-template-columns: 20vw auto;
         grid-template-rows: auto;
         height: 80vh;
+        padding-top: 2em;
 
         .main-side {
             padding: 0 2em;
-            height: 75vh;
+            height: 80vh;
             overflow-y: auto;
 
-            .contacts-list {
+            .header-part {
                 display: grid;
                 grid-template-columns: auto auto;
                 grid-template-rows: auto;
+                align-items: center;
+                margin-bottom: 2em;
+
+                .mini-title {
+                    justify-self: flex-start;
+                    margin-bottom: 0;
+                }
+
+                .actions {
+                    justify-self: flex-end;
+                    display: flex;
+
+                    .main-btn {
+                        margin-right: 1em;
+                    }
+                }
+            }
+
+            .inner-sec {
+                display: grid;
+                grid-template-columns: 28vw auto;
+                grid-template-rows: auto;
                 column-gap: 1em;
 
-                .nice-card {
-                    background: $gradient-color;
+                .contacts-container {
+                    height: 70vh;
+                    background-color: rgba(255,255,255,0.03);
+                    border-radius: 10px;
+                    padding: 0.5em;
+
+                    .search-part {
+                        position: relative;
+                        margin-bottom: 1em;
+        
+                        input {
+                            border: 0;
+                            border-radius: 15px;
+                            padding: 0.3em 1em;
+                            color: $text-color;
+                            margin: 0;
+                        }
+        
+                        button {
+                            position: absolute;
+                            top: 2px;
+                            right: 2px;
+                            border: 1px solid $grey-text-color;
+                            border-radius: 0 15px 15px 0;
+                            color: $grey-text-color;
+                            padding: 0.22em 0.75em;
+                            font-size: 14px;
+                            background-color: transparent;
+                            transition: $transition;
+        
+                            &:hover {
+                                color: $text-color;
+                                transition: $transition;
+                            }
+                        }
+                    }
+
+                    .contacts-list {
+                        overflow-y: auto;
+                        
+                        
+                        .nice-card {
+                            background: $dark-color;
+                            padding: 0.75em 1em;
+                            border: 1px solid $dark-color;
+                            display: grid;
+                            grid-template-columns: 50px auto auto;
+                            grid-template-rows: auto;
+                            column-gap: 0.5em;
+                            align-items: center;
+                            margin-bottom: 5px;
+                            cursor: pointer;
+                            transition: $transition;
+    
+                            &:first-child {
+                                border-radius: 10px 10px 0 0;
+                            }
+    
+                            &:last-child {
+                                border-radius: 0 0 10px 10px;
+                            }
+    
+                            &:hover {
+                                background-color: lighten($dark-color, 5%);
+                                transition: $transition;
+                            }
+    
+                            .contact-avatar {
+                                justify-self: flex-start;
+                                width: 50px;
+                                height: 50px;
+                                display: inline-block;
+                                border-radius: 100%;
+    
+                                img {
+                                    border-radius: 25px;
+                                }
+                            }
+    
+                            .name-and-contact {
+                                .name {
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    color: $text-color;
+                                    margin: 0;
+                                    margin-bottom: 5px;
+                                }
+    
+                                .quick-contact {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: $grey-text-color;
+                                    margin: 0;
+                                    
+                                }
+                            }
+    
+                            .arrow-right {
+                                justify-self: end;
+                                color: $text-color;
+                            }
+                        }
+                    }
+                }
+                
+                .single-contact-container {
+                    height: 70vh;
+                    width: 100%;
+                    background-color: rgba(255,255,255,0.03);
+                    border-radius: 10px;
                     padding: 1em;
-                    border: 1px solid $dark-color;
                 }
             }
         }

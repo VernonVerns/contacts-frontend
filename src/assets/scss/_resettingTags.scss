@@ -35,6 +35,11 @@ body {
 	position: relative;
 }
 
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
 button {
 	outline: none !important;
 }
@@ -47,10 +52,15 @@ input, textarea {
 	padding: 0.3em 0.75em;
 	font-size: 16px;
 	outline: none;
-
-    &:focus{
-        box-shadow: none;
-    }
+	background-color: $dark-color !important;
+	color: $text-color;
+	font-weight: 500;
+	border: 1px solid transparent;
+    
+	&:focus {
+		border-color: $grey-text-color;
+		box-shadow: none;
+	}
 }
 
 textarea {
