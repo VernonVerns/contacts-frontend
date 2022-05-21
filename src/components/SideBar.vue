@@ -4,7 +4,7 @@
             <li><router-link to="/"><span><img src="../assets/img/Icons/dashboard.svg" alt="dashboard icon"></span> Dashboard</router-link></li>
             <li><router-link to="/" class="active-router"><span><img src="../assets/img/Icons/list.svg" alt="contacts list icon"></span> Contacts</router-link></li>
             <li><router-link to="/"><span><img src="../assets/img/Icons/contacts.svg" alt="friends icon"></span> Friends</router-link></li>
-            <li><router-link to="/"><span><img src="../assets/img/Icons/trash.svg" alt="trash icon"></span> Trash</router-link></li>
+            <li><router-link to="/" class="trash"><span><img src="../assets/img/Icons/trash.svg" alt="trash icon"></span> Trash <span class="badge number-deleted">0</span></router-link></li>
         </ul>
 
         <div class="footer-options">
@@ -15,7 +15,7 @@
                 <li class="developer">
                     <router-link to="/" class="details">
                         <div class="avatar">
-                            <img src="../assets/img/simamkele.jpg" alt="">
+                            <img src="../assets/img/simamkele.jpg" alt="Simamkele Ndabeni">
                         </div>
                         <div class="name-and-position">
                             <h3 class="name">Simamkele Ndabeni</h3>

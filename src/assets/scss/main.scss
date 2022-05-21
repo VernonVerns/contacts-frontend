@@ -35,12 +35,17 @@ $transition: all 0.5s ease-in-out;
     border-color: $grey-text-color;
 }
 
+.delete-btn {
+    @extend %btn-style;
+    background-color: #ff0000;
+}
+
 .mini-title {
     font-size: 18px;
     font-weight: 500;
     color: $text-color;
     margin: 0;
-    margin-bottom: 2em
+    margin-bottom: 2em;
 }
 
 .mini-title2 {
@@ -54,9 +59,49 @@ $transition: all 0.5s ease-in-out;
 .navigation-bar {
     width: 100%;
     padding: 1.5em 3em 0 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
 
     img {
         width: 180px;
+        justify-self: flex-start;
+    }
+
+    .navigation-menu {
+        justify-self: flex-end;
+        display: flex;
+        align-items: center;
+
+        li {
+            margin-right: 0;
+
+            a {
+                color: $grey-text-color;
+                padding: 0 1.5em;
+
+                img {
+                    width: 16px;
+                    
+                    &.facebook-icon {
+                        width: 12px;
+                    }
+                }
+                
+            }
+
+            &.current-logged {
+                border-right: 1px solid;
+            }
+
+            &:last-child {
+                a {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
     }
 }
 
@@ -103,6 +148,14 @@ $transition: all 0.5s ease-in-out;
 
                     img {
                         width: 20px;
+                    }
+                }
+
+                &.trash {
+                    .number-deleted {
+                        float: right;
+                        font-size: 12px;
+                        background-color: $dark-color;
                     }
                 }
             }

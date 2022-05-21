@@ -1,7 +1,7 @@
 <script setup>
 
 </script>
-<template lang="">
+<template>
     <div class="contact nice-card shadow-sm">
         <div class="contact-avatar">
             <img src="https://www.advansix.com/assets/uploads/2016/08/gilfoyle.png" alt="Gilfoyle As Default Avatar">
@@ -13,5 +13,8 @@
         <span class="arrow-right">
             &rarr;
         </span>
+
+        <input type="checkbox" name="select_contact" id="select_contact" hidden>
+        <label for="select_contact"></label>
     </div>
 </template>

@@ -42,7 +42,9 @@
                             <ContactCard />
                             <ContactCard />
                         </div>
-                        
+                        <div class="footer-action-btns">
+                            <button type="button" class="delete-btn shadow">Delete</button>
+                        </div>
                     </div>
                     <div class="single-contact-container">
                         <DefaultView hidden />

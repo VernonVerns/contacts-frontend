@@ -68,6 +68,7 @@
                     background-color: rgba(255,255,255,0.03);
                     border-radius: 10px;
                     padding: 0.5em;
+                    position: relative;
 
                     .search-part {
                         position: relative;
@@ -116,6 +117,7 @@
                             margin-bottom: 5px;
                             cursor: pointer;
                             transition: $transition;
+                            position: relative;
     
                             &:first-child {
                                 border-radius: 10px 10px 0 0;
@@ -164,7 +166,41 @@
                                 justify-self: end;
                                 color: $text-color;
                             }
+
+                            label {
+                                position: absolute;
+                                top: 0.2em;
+                                right: 0.2em;
+                                display: inline-block;
+                                height: 15px;
+                                width: 15px;
+                                border-radius: 5px;
+                                background-color: $bg-color;
+                                cursor: pointer;
+                                display: none;
+                                transition: $transition;
+                            }
+
+                            input:checked + label {
+                                background-color: $primary-color;
+                                display: block;
+                                transition: $transition;
+                            }
+                            
+                            &:hover {
+                                label {
+                                    display: block;
+                                    transition: $transition;
+                                }
+                            }
                         }
+                    }
+
+                    .footer-action-btns {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        padding: 1em;
                     }
                 }
                 
@@ -254,6 +290,28 @@
                                         font-size: 16px;
                                         font-weight: 400;
                                         color: rgba(255,255,255,0.8);
+                                    }
+                                }
+
+                                .action-icons {
+                                    position: absolute;
+                                    top: 1em;
+                                    right: 1em;
+
+                                    a {
+                                        display: inline-block;
+                                        margin-right: 1em;
+                                        background-color: $primary-color;
+                                        padding: 0.5em 0.75em;
+                                        text-align: center;
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 100%;
+                                        color: $text-color !important;
+
+                                        &:last-child {
+                                            margin-right: 0;
+                                        }
                                     }
                                 }
                             }

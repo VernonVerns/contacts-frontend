@@ -21,7 +21,7 @@
                         </div>
                         <div>
                             <h4 class="contact-label">Tel Number</h4>
-                            <h4 class="contact">03 9727 2624</h4>
+                            <h4 class="contact">039 727 2624</h4>
                         </div>
                         <div>
                             <h4 class="contact-label">Email Address</h4>
@@ -39,6 +39,10 @@
                     </p>
                     <span>Note date</span>
                     <h5 class="note-date">May 20, 2022</h5>
+                </div>
+                <div class="action-icons">
+                    <a href="tel:+2700000000000"><img src="../assets/img/Icons/phone.svg" alt="phone icon" /></a>
+                    <a href="mailto:johndoe@domain.co.za"><img src="../assets/img/Icons/envelope.svg" alt="Envelope Icon" /></a>
                 </div>
             </div>
         </div>
