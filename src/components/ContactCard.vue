@@ -8,7 +8,7 @@
         </div>
         <div class="name-and-contact">
             <h3 class="name">John Doe</h3>
-            <h5 class="quick-contact">0738695854 &bull; johndoe@email.com</h5>
+            <h5 class="quick-contact">0738695854 &bull; johndoe@domain.co.za</h5>
         </div>
         <span class="arrow-right">
             &rarr;

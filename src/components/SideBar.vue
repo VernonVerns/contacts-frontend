@@ -1,16 +1,16 @@
 <template>
     <div class="side-bar">
         <ul class="list-unstyled">
-            <li><router-link to="/">Dashboard</router-link></li>
-            <li><router-link to="/" class="active-router">Contacts</router-link></li>
-            <li><router-link to="/">Friends</router-link></li>
-            <li><router-link to="/">Trash</router-link></li>
+            <li><router-link to="/"><span><img src="../assets/img/Icons/dashboard.svg" alt="dashboard icon"></span> Dashboard</router-link></li>
+            <li><router-link to="/" class="active-router"><span><img src="../assets/img/Icons/list.svg" alt="contacts list icon"></span> Contacts</router-link></li>
+            <li><router-link to="/"><span><img src="../assets/img/Icons/contacts.svg" alt="friends icon"></span> Friends</router-link></li>
+            <li><router-link to="/"><span><img src="../assets/img/Icons/trash.svg" alt="trash icon"></span> Trash</router-link></li>
         </ul>
 
         <div class="footer-options">
             <ul class="list-unstyled">
-                <li><router-link to="/">Settings</router-link></li>
-                <li><router-link to="/">Support</router-link></li>
+                <li><router-link to="/"><span><img src="../assets/img/Icons/cogs.svg" alt="settings icon"></span> Settings</router-link></li>
+                <li><router-link to="/"><span><img src="../assets/img/Icons/support.svg" alt="support icon"></span> Support</router-link></li>
                 <hr />
                 <li class="developer">
                     <router-link to="/" class="details">

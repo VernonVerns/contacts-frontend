@@ -1,8 +1,26 @@
 #contacts_page {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.1);
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: $primary-color;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
     .header-part {
        
-
-        
     }
 
     .content {
@@ -126,7 +144,7 @@
     
                             .name-and-contact {
                                 .name {
-                                    font-size: 20px;
+                                    font-size: 18px;
                                     font-weight: 500;
                                     color: $text-color;
                                     margin: 0;
@@ -155,7 +173,92 @@
                     width: 100%;
                     background-color: rgba(255,255,255,0.03);
                     border-radius: 10px;
-                    padding: 1em;
+                    padding: 0 1em;
+                    position: relative;
+                    overflow-y: auto;
+
+                    .single-contact {
+                        .content {
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            grid-template-rows: auto;
+                            column-gap: 2em;
+
+                            .avatar {
+                                img {
+                                    width: 100px;
+                                }
+                            }
+
+                            .details {
+                                .header-sec {
+                                    padding-top: 1.5em;
+                                    margin-bottom: 2em;
+
+                                    h3 {
+                                        font-size: 22px;
+                                        font-weight: 700;
+                                        margin: 0;
+                                        color: $text-color;
+                                    }
+
+                                    h5 {
+                                        color: $grey-text-color;
+                                        font-size: 18px;
+                                        font-weight: 300;
+                                    }
+                                }
+
+                                .contacts-sec {
+                                    .contact-details {
+                                        display: grid;
+                                        grid-template-columns: auto auto;
+                                        grid-template-rows: auto;
+                                        row-gap: 1.5em;
+                                        margin-bottom: 2em;
+
+                                        .contact-label {
+                                            color: $grey-text-color;
+                                            font-size: 14px;
+                                            text-transform: uppercase;
+                                            margin: 0;
+                                            margin-bottom: 5px;
+                                        }
+
+                                        .contact {
+                                            margin: 0;
+                                            font-size: 16px;
+                                            color: rgba(255,255,255,0.8);
+                                        }
+                                    }
+                                }
+
+                                .contact-notes {
+                                    span {
+                                        color: $grey-text-color;
+                                        font-weight: 300;
+                                    }
+
+                                    .mini-title {
+                                        &.note-title {
+                                            margin-bottom: 1em !important;
+                                        }
+                                    }
+
+                                    p {
+                                        font-size: 16px;
+                                        color: rgba(255,255,255,0.8);
+                                    }
+
+                                    .note-date {
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        color: rgba(255,255,255,0.8);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

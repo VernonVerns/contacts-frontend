@@ -45,8 +45,8 @@
                         
                     </div>
                     <div class="single-contact-container">
-                        <DefaultView />
-                        <SingleContact hidden />
+                        <DefaultView hidden />
+                        <SingleContact />
                     </div>
                 </div>
             </div>
